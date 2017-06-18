@@ -1,0 +1,1 @@
+function FindProxyForURL(r,i){var n,t,e=i.lastIndexOf(".");if(-1==e)return direct;if(n=i.substring(e+1),!(t=domains[n]))return direct;for(t=t.split("|"),e=(i=i.substring(0,e)).lastIndexOf(".");;){if(-1==e)return-1==t.indexOf(i)?direct:proxy;if(n=i.substring(e+1),t.indexOf(n)>=0)return proxy;e=i.lastIndexOf(".",e-1)}}var domains=__DOMAINS__,proxy=__PROXY__,direct="DIRECT;";
